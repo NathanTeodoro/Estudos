@@ -1,0 +1,77 @@
+@keyframes changeColor{
+    from {background-color: red; width: 400px;}
+    25%{background-color: green; width: 40px;}
+    50%{background-color: yellow; width: 300px;}
+    75%{background-color: black; width: 100px;}
+    to {background-color: blue; width: 200px;}
+    /*podemos usar 
+      from{}
+      to{}
+      
+      OU
+
+      0%{}
+      50%{}
+      75%{}
+    */
+}
+
+@keyframes changeColor2{
+    from{background-color: orangered;}
+    to{background-color: purple;}
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: changeColor;/* nome da animação */
+    animation-duration: 5s;/* tempo da animação */
+    animation-delay: 5s;/* delay para começo da animação
+    nesse caso podemos colocar um valor negativo. Suponamos
+    que a aimação dure 10s colocando o delay -5s a animção começara pelo meio*/
+
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: changeColor2;
+    animation-duration: 5s;
+    animation-direction: alternate;/*aqui alternamos do laranja para o roxo
+    do roxo para o laranja*/
+    animation-iteration-count: 3;/*ou infinite*/
+    /*com a tag a cima podemos fazer um loop*/
+    animation-fill-mode: both;/* "ignora" o delay ja apresentanto o primeiro quadro da animação*/
+    /*both anima e para no ultimo frame
+      backwards começa a animação e para no ultimo frame
+      forwards carrega a animação no primeiro frame*/
+}
+@keyframes move {
+    0% {left: 0px;}
+    100%{left: 100px}
+}
+.box3{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-duration: 5s;
+    animation-name: move;
+    animation-fill-mode: forwards;
+}
+.div1{
+    animation-timing-function: linear;/* DIFERENÇAS DE VELOCIDADE*/
+}
+.div2{
+    animation-timing-function: ease;
+}
+.div3{
+    animation-timing-function: ease-in;
+}
+.div4{
+    animation-timing-function: ease-out;
+}
+.div5{
+    animation-timing-function: ease-in-out;
+}

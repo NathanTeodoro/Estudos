@@ -1,0 +1,28 @@
+#table{
+    background-color: blue;
+    color: white;
+}
+.topnav{
+    background-color: rgb(59, 28, 63);
+    overflow: hidden;
+}
+.topnav a{
+    float: left;
+    color: #ffff;
+    text-align: center;
+    padding: 14px 16px ;
+    margin: 2px;
+    text-decoration: none;
+    font-size: 19px;
+
+}
+.topnav a:hover{
+    background-color: rgb(112, 97, 201);
+    color: wheat;
+}
+.topbav a :active{
+    background-color: rgb(176, 228, 98);
+}
+.example-spacer {
+    flex: 1 1 auto;
+}

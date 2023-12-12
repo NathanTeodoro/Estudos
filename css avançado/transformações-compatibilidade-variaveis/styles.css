@@ -1,0 +1,22 @@
+img{
+    width: 420px;
+    /*transform: rotate(45deg);
+    transform: scale(0.5);
+    transform: skew(0,30deg) scale(0.7,1);
+    -webkit-transform: skew(0,30deg) scale(0.7,1);
+    -moz-transform: skew(0,30deg) scale(0.7,1);
+    -ms-transform: skew(0,30deg) scale(0.7,1);
+    */
+}
+:root{
+    --var_color:aqua;
+    --square-size:200px
+
+}
+p{
+    color: var(--var_color);
+}
+.sqrl{
+    width: var(--square-size);
+    color: var(--var_color)
+}

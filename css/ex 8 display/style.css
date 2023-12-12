@@ -1,0 +1,19 @@
+#menu{
+    position:absolute;
+    background-color: black;
+    color: greenyellow;
+    width: 50%;
+    height: 100%;
+    visibility:hidden;
+    display: block;
+    list-style: none;
+}
+li{
+    border: 3px;
+    background-color: grey;
+    border-color: black;
+}
+#menu:hover{
+    display: block;
+    visibility: visible;
+}

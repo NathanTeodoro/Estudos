@@ -1,0 +1,42 @@
+<app-toolbar></app-toolbar>
+
+<h1>bem vindo ao treinamento angular</h1>
+<h2>{{title}}</h2>
+ 
+<button (click)="mudarTexto()">Mudar Texto</button>
+
+<p>Olá Mundo<br>{{newText}}</p>
+
+<img [src] = "imgUrl" width="100px">
+
+<button (click)="callFUnction()">trocar Foto</button>
+
+<input placeholder="o que vc vê?" [(ngModel)] = "newText2">
+
+<button (click)="ce(newText2)">responder</button>
+<h3>{{newText2}}</h3>
+
+<h1 *ngIf="fase; else mensagempadrao">{{fase}}</h1>
+
+<ng-template #mensagempadrao>
+    <h1>mensagempadrao</h1>
+</ng-template>
+
+
+
+<span [ngSwitch]="newText3">
+<p *ngSwitchCase="true">
+    true
+</p>
+<p *ngSwitchCase="false">
+    false
+</p>
+<p *ngSwitchDefault>
+    null
+</p>
+</span>
+<input type="checkbox" [(ngModel)]="newText3">
+
+
+
+<router-outlet></router-outlet>

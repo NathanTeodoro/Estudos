@@ -1,0 +1,20 @@
+.links,.links2{
+    text-decoration: none;
+    color: red;
+    cursor: crosshair;
+    /*background: #bc2035;*/
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: 2px solid #bc2035;
+    
+}
+.links:hover{
+    background: #bc2035;
+    color: white;
+}
+.links2:active{
+    background: #bc2035;
+    color: white;
+}

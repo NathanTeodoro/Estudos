@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+ const pessoas = ["Hayley","Joey","Justyn","Anabelle","Kamren","William","Tracy","Shelbie","Donna","Rita"]
+function sortear(){
+    let np = pessoas.length
+    let ns = Math.round(Math.random() *np)
+    document.getElementById("display").innerHTML=pessoas[ns]
+
+}
+
+
+
+
+</script>
+
+<body>
+<h1 id="display"></h1>
+    <button onclick="sortear()" style="background-color: black; color: cyan;"> sortear</button>
+</body>
+</html>

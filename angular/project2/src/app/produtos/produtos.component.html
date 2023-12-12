@@ -1,0 +1,7 @@
+<app-toolbar></app-toolbar>
+<input placeholder="search" type='text' [(ngModel)]="term">
+<button type="submit" (click)="buscar(term,nome)"><mat-icon>search</mat-icon></button>
+<h1>Pesquisa: '{{term}}'</h1>
+<h2>{{nome}}</h2>
+<app-view-product [nome]="produtos"></app-view-product>
+<router-outlet></router-outlet>

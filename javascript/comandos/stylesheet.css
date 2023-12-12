@@ -1,0 +1,28 @@
+h1{text-align: center;
+    text-shadow: 3px;
+    background-color: rgb(43, 226, 73);
+    border-style: solid;
+    border-radius: 5px;}
+
+nav{position:static;
+    text-align:center;
+    word-spacing: 15px;
+    margin: 20px;
+    color: rgb(0, 255, 98);
+    text-decoration-color: rgb(0, 255, 98);
+    text-shadow: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: black;}
+
+#seção1{width: 300px;
+    height: 500px;
+    border-style: dashed;
+    border-color: black;
+}
+aside{
+    width: 300px;
+
+}
+
+

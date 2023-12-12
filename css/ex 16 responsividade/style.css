@@ -1,0 +1,28 @@
+body{
+    font-size: 1.2rem;
+
+}
+
+.header{
+    position: relative;
+    width: 80%;
+    height: 100px;
+    background-color: gray;
+    margin: auto;
+    padding: 30px;
+}
+.content{
+    position: relative;
+    margin: auto b;
+    width: 70%;
+    height: 70%;
+    background-color: blue;
+
+    top: 50%;
+    left: 50%;
+    color: aliceblue;
+    text-align: center;
+    transform: translate( -50%,-50%);
+    font-size: 6vw;
+
+}

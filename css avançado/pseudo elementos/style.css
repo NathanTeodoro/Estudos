@@ -1,0 +1,38 @@
+p::first-line{
+    color:rebeccapurple
+}
+p::first-letter{
+    color: darkblue;
+    font-size: 5rem;
+}
+li{
+    /*list-style: none;
+    margin-left: 200px;
+    list-style: url(icon.png);*/
+    list-style: none;
+}
+li::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-image: url(icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+li::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-image: url(icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+p::selection{
+    background-color: blue;
+    color: red;
+}

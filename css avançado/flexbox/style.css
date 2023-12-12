@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: row;  /*---> direção do display nesse caso em linha*/
+    flex-wrap: wrap;  /*---> Nesse exemplo mantem o tamanho dos elementos*/
+    /* flex-flow: column-reverse wrap; ---> Aqui definimos as fus props a cima com uma tag*/
+    /*justify-content: flex-end;  ---> colocamos todas os elementos no fundo da div -- temos outras opções */
+    /*justify-content: space-betwen ---> nesse caso colocamos um espaço entre cada div que se autoregula de acordo com o tamanho da pagina*/
+    align-items: center; /* ---> Alinha os itens no centro da div -- temos outras opções*/
+    align-content: center;/* ---> ALinha os itens em relação a linha -- nesse caso no meio da div. Podendo ser a cima em baixo etc*/
+    height: 400px;
+
+    background-color: darkgray;
+    color: white;
+}
+.r1{
+    order: 2; 
+    flex-shrink: 0 ;/*0 OR 1 ---> pode ou não encolher o elemento*/
+    background-color: red;
+}
+.r2{
+    order: 3;/*---> MUda a ordem dos elementos sem mexer no html*/
+    background-color: blue;
+    align-self: flex-end;/*---> com esse atributo alinhamos somente esse item no final da div*/
+}
+.r3{
+    order: 1;
+    flex-grow: 1;/* 0-9 2-seria o dobro do tamanho dos outros 3 o triplo---> elemento pode aumentar de acordo coom o tamanho da janela*/
+    background-color: green;
+}
+.rect{
+    width: 150px;
+    height: 100px;
+}/**/

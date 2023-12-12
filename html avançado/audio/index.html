@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.controls{
+            
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /*background-color: red;*/
+            text-align: center;
+        
+        
+        }
+
+
+        .btn{
+            position: relative;
+            width: 60px;
+            margin: 10px;
+            top: 100%;
+            transform: translateY(-110%);
+        }
+
+
+
+</style>
+<body>
+    
+    <audio id="music">
+        <source src="X2Download.app - Disfarce... (128 kbps).mp3" type="audio/mp3">
+        <!--usando source ao inves de src podemos carregar mais de um arquivo caso o navegador
+        não reconheça o primeiro carregamento usara o proximo-->
+    </audio>
+    <div class="controls">
+        <img class="btn" onclick="less()" src="player/back.png" alt="">
+        <img class="btn" onclick="plus()" src="player/foward.png" alt="">
+        <img class="btn" onclick="gback()" src="player/decrease.png" alt="">
+        <img class="btn" onclick="fastf()" src="player/increase.png" alt="">
+        <img class="btn" onclick="play()" src="player/play.png" alt="">
+        <img class="btn" onclick="stop()" src="player/stop.png" alt="">
+        <img class="btn" onclick="pause()" src="player/pause.png" alt="">
+
+    </div>
+<script>
+    var music = document.getElementById("music")
+        function plus(){
+            music.currentTime+=15
+        }
+        function less(){
+            music.currentTime-=15
+        }
+        function fastf(){
+            music.playbackRate += 0.1
+        }
+        function gback(){
+            music.playbackRate -= 0.1
+        }
+        function play(){
+            music.play()
+        }
+        function stop(){
+            music.pause()
+            music.currentTime=0//voltar inicio 
+        }
+        function pause(){
+            music.pause()
+        }
+
+</script>
+
+
+
+
+
+</body>
+</html>

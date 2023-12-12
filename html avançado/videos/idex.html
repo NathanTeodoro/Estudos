@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            position: relative; 
+            width: 640px;
+            height: 360px;
+        }
+
+        .video{
+            width: 100%;
+        }
+        .controls{
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /*background-color: red;*/
+            text-align: center;
+        
+        
+        }
+
+
+        .btn{
+            position: relative;
+            width: 60px;
+            margin: 10px;
+            top: 100%;
+            transform: translateY(-110%);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+    <video  src="assets/X2Download.app-Manhunt 2 Hidden Area In Personality Clash.mp4" poster="assets/poster.jpg" width="540" controls preload="none" autoplay muted loop></video>
+    </div>
+    <!--fonte , foto video , tamanho , controles precarregamento autoplay mudo loop(reiniciar video sempre)-->
+    <h2>relative e a posição estatica mas com controles de tamanho</h2>
+    <div class="container">
+        <video onmouseover="scontrols()" id="video1" class="video" src="./assets/X2Download.app-180803 Muscle up training 머슬업 연습.mp4"></video>
+
+        <div class="controls">
+            <img class="btn" onclick="less()" src="player/back.png" alt="">
+            <img class="btn" onclick="plus()" src="player/foward.png" alt="">
+            <img class="btn" onclick="gback()" src="player/decrease.png" alt="">
+            <img class="btn" onclick="fastf()" src="player/increase.png" alt="">
+            <img class="btn" onclick="play()" src="player/play.png" alt="">
+            <img class="btn" onclick="stop()" src="player/stop.png" alt="">
+            
+
+        </div>
+
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>

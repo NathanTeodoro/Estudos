@@ -1,0 +1,45 @@
+*{
+    color: white;
+    margin: 0;
+    padding: 10px;
+    display: grid;
+    background-color: gray;
+
+    grid-template-areas: "a2 a2 a2 a2 a2 a2"
+                         "a1 a1 a3 a3 a3 a3"
+                         "a1 a1 a5 a4 a4 a4"
+                         "a6 a6 a6 a6 a6 a6"
+    
+    
+    /* efeito de L não funcionará
+    defina os tamanhos muito bem, previna erros
+    */
+    
+}
+.r1{
+    background-color: red;
+}
+.r2{
+    background-color: blue;
+}
+.r3{
+    background-color: green;
+}
+.item1{
+    grid-area: a1;
+}
+.item2{
+    grid-area: a2;
+}
+.item3{
+    grid-area: a3;
+}
+.item4{
+    grid-area: a4;
+}
+.item5{
+    grid-area: a5;
+}
+.item6{
+    grid-area: a6;
+}

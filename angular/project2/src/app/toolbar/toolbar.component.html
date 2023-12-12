@@ -1,0 +1,151 @@
+<mat-toolbar>
+    <button mat-button [matMenuTriggerFor]="Menu">Menu ☰</button>
+<mat-menu #Menu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="Fones">Fones de ouvido</button>
+  <button mat-menu-item [matMenuTriggerFor]="CabosUSB">Cabos USB</button>
+  <button mat-menu-item [matMenuTriggerFor]="VideoGames">Video Games</button>
+  <button mat-menu-item [matMenuTriggerFor]="Celulares">Celulares</button>
+  <button mat-menu-item [matMenuTriggerFor]="Tablets">Tablets</button>
+  <button mat-menu-item [matMenuTriggerFor]="Roteadores">Roteadores</button>
+  <button mat-menu-item [matMenuTriggerFor]="Notebooks">Notebooks</button>
+  <button mat-menu-item [matMenuTriggerFor]="Carregadores">Carregadores</button>
+  <button mat-menu-item [matMenuTriggerFor]="TVS">TV's</button>
+  
+</mat-menu>
+
+<mat-menu #Fones="matMenu">
+  <button mat-menu-item>Fones com fio</button>
+  <button mat-menu-item>Fones sem fio</button>
+  <button mat-menu-item>Headsets com fio</button>
+  <button mat-menu-item>Headsets sem fio</button>
+  
+</mat-menu>
+
+<mat-menu #CabosUSB="matMenu">
+  <button mat-menu-item>Cabos com fio</button>
+  <button mat-menu-item>Sem sem fio</button>
+  <button mat-menu-item>Tipo C</button>
+  <button mat-menu-item>Cabos Antigos</button>
+  <button mat-menu-item>Cabos Iphone</button>
+  
+</mat-menu>
+
+<mat-menu #VideoGames="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="Microsoft">Microsoft</button>
+  <button mat-menu-item>Sony</button>
+  <button mat-menu-item>Nintendo</button>
+  <button mat-menu-item>Sega</button>
+</mat-menu>
+<mat-menu #Microsoft="matMenu">
+  <button mat-menu-item>Xbox</button>
+  <button mat-menu-item>Xbox360</button>
+  <button mat-menu-item [matMenuTriggerFor]="XboxOne">XboxONE</button>
+  <button mat-menu-item [matMenuTriggerFor]="XboxSeries">XboxSeries</button>
+  
+</mat-menu>
+<mat-menu #XboxOne="matMenu">
+  <button mat-menu-item>X</button>
+  <button mat-menu-item>S</button>
+  <button mat-menu-item>Elite</button>
+  <button mat-menu-item>All DIgital</button>
+
+
+</mat-menu>
+<mat-menu #XboxSeries="matMenu">
+  <button mat-menu-item>X</button>
+  <button mat-menu-item>S</button>
+  
+
+
+</mat-menu>
+
+<mat-menu #Celulares="matMenu">
+  <button mat-menu-item>Apple</button>
+  <button mat-menu-item>Samsung</button>
+  <button mat-menu-item>Lenovo</button>
+  <button mat-menu-item>LG</button>
+  <button mat-menu-item>Xiaomi</button>
+  <button mat-menu-item>Hauwei</button>
+  <button mat-menu-item>Asus</button>
+  <button mat-menu-item>Nokia</button>
+  <button mat-menu-item>Positivo</button>
+  
+</mat-menu>
+
+<mat-menu #Tablets="matMenu">
+  <button mat-menu-item>Apple</button>
+  <button mat-menu-item>Xiaomi</button>
+  <button mat-menu-item>Multilaser</button>
+  <button mat-menu-item>Positivo</button>
+  <button mat-menu-item>Motorola</button>
+  <button mat-menu-item>Lenovo</button>
+  <button mat-menu-item>Philco</button>
+  <button mat-menu-item>Microsoft</button>
+  <button mat-menu-item>Nokia</button>
+  
+</mat-menu>
+<mat-menu #Roteadores="matMenu">
+  <button mat-menu-item>ASUS</button>
+  <button mat-menu-item>TP-link</button>
+  <button mat-menu-item>Tenda</button>
+  <button mat-menu-item>Intelbras</button>
+  <button mat-menu-item>MERCUSYS</button>
+  <button mat-menu-item>Xiaomi</button>
+  <button mat-menu-item>Multilaser</button>
+</mat-menu>
+<mat-menu #Notebooks="matMenu">
+  <button mat-menu-item>Acer</button>
+  <button mat-menu-item>Dell</button>
+  <button mat-menu-item>Samsung</button>
+  <button mat-menu-item>Asus</button>
+  <button mat-menu-item>Lenovo</button>
+  <button mat-menu-item>Vaio</button>
+  <button mat-menu-item>LG</button>
+  <button mat-menu-item>Apple</button>
+  <button mat-menu-item>Positivo</button>
+  <button mat-menu-item>Multilaser</button>
+</mat-menu>
+<mat-menu #Carregadores="matMenu">
+  <button mat-menu-item>Typo C</button>
+  <button mat-menu-item>Iphones</button>
+  <button mat-menu-item>Notebooks</button>
+</mat-menu>
+<mat-menu #TVS="matMenu">
+  <button mat-menu-item>LG</button>
+  <button mat-menu-item>Samsung</button>
+  <button mat-menu-item>Philips</button>
+  <button mat-menu-item>TCL</button>
+  <button mat-menu-item>Philco</button>
+  <button mat-menu-item>AOC</button>
+  <button mat-menu-item>Toshiba</button>
+  <button mat-menu-item>Panasonic</button>
+  <button mat-menu-item>Multilaser</button>
+
+</mat-menu>
+
+
+
+    <span class="title">Big Tech Store</span>
+    <span class="example-spacer"></span>
+    <div class="example-button-container">
+    </div>
+    <a routerLink="/home" routerLinkActive="active">
+      <button mat-icon-button class="example-icon" aria-label="Example icon button with a home icon">
+      <mat-icon>home</mat-icon>
+    </button>
+  </a>
+      <a routerLink="/produtos" routerLinkActive="active">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+      </a>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>favorite_border</mat-icon>
+      </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>

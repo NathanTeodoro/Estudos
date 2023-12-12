@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        padding: 20px;
+        background-color: aquamarine;
+        font-size: medium;
+        color: aliceblue;
+        display: inline-block;
+        margin: 20px;
+    }
+</style>
+<body onload="alert('pagina carregada !!!')">
+    <h1 onclick="console.log('h1 foi clicado')">texto</h1>
+    <br>
+    <h1 onclick="Click()">texto2</h1>
+    <br>
+    <h1 onclick="console.log(this)">texto2</h1>
+    <br>
+    <h1 onclick="this.style.color='red'">Clique em mim</h1>
+    <br>
+    <h1>console</h1>
+    <br>
+    <input type="text" onchange="changeh1()">
+    <br>
+    <h2>...</h2> 
+    <input type="text" id="input" onchange="changeh2()">
+    <br>
+    <h3>...</h3> 
+    <input type="text" id="input2" oninput="changeh3()">
+    <br>
+    <div onclick="hideh1()" onmouseover="onOver(this)" onmouseout="onOut(this)">CLICK</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="style.js"></script>
+</html>

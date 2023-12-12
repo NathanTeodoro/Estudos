@@ -1,0 +1,17 @@
+The Zen python , by Tim Peters
+
+-Bonito e melhor que feio!
+Programadores python gostam de beleza no seu código, mas devemos sempre respeitar e seguir soluções inteligentes e eficazes.
+
+-Simples e melhor que complexo!
+Use sempre soluções simples para seus projetos a mantenabilidade e manutenção por outros podem ser mais fácil.
+
+-Legibilidade conta!
+Sempre que precisar de soluções complexas use comentários e escreva seu codigo de forma mais legivel possivel.
+
+-Deve haver uma - e, de preferência, apenas uma - maneira óbvia de fazer algo!
+Programadores desafiados com o mesmo problema devem fazer soluções compativeis, não que programação exclua a necessidade de criatividade, mas programadores de fora tem que ver sentido na solução desenvolvida.
+
+-Agora melhor que nunca!
+Podemos conhecer todos os detalhes do python e da programação em geral, mas se não programar-mos nada de nada vale esse conhecimento!Então programe! Não estude muito sem produzir buscando o metodo e o codigo perfeito para se resolver algo.
+

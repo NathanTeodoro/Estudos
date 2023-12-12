@@ -1,0 +1,35 @@
+body{
+    font-size: 1.2rem;
+
+}
+.card{
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 200px;
+    border: 2px solid green;
+    text-align: center;
+
+}
+.c1{
+   
+    line-height: 200px;
+    
+}
+.c2{
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card2{
+    clear: left;
+    border: 2px solid green;
+    float: left;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}

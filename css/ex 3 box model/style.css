@@ -1,0 +1,23 @@
+body{
+    margin: 0;  
+    padding: 0; 
+
+}
+.container{
+    background-color: red;
+    padding: 5px;
+    border: 5px solid blue;
+}
+.content{
+    background-color: #ddd;
+    border: 5px solid green;
+    padding: 5px;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 10px solid blue;    
+
+
+}

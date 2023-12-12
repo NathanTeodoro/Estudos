@@ -1,0 +1,15 @@
+<c-carousel class="carousel" [touch]='true'[wrap]="false" [transition]="'crossfade'">
+    <c-carousel-inner>
+      <c-carousel-control class="prev" [routerLink] caption="Previous" direction="prev">&lt;</c-carousel-control>
+      <c-carousel-control class="next" [routerLink] caption="Next" direction="next">&gt;</c-carousel-control>
+      <c-carousel-item *ngFor="let slide of slides index as inj">
+        <img
+          [src]="slide.src"
+          alt="{{slide.title}}"
+          class="d-block"
+          loading="lazy"
+        />
+        
+      </c-carousel-item>
+      </c-carousel-inner>
+    </c-carousel>

@@ -1,0 +1,28 @@
+body{
+    font-size: large;
+}
+
+img{
+    float: left;
+
+}
+p{
+    clear: left;
+}
+div{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: darkgray;
+    overflow: auto;
+
+}
+ul{
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+    margin: 5px;
+    float: none;
+}
+li{
+    list-style: none;
+}

@@ -1,0 +1,51 @@
+body{
+margin: 0;
+padding: 0;
+
+}
+.header{
+    overflow: hidden;
+    margin: auto;
+    width: 80%;
+    background-color: aqua;
+    padding: 15px;
+    font-size: 18px;
+
+}
+.menu{
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float:right;
+
+}
+li{
+    display: inline-block;
+    color: black;
+    margin-right: 15px;
+
+}
+.logo{
+    float: left;
+    display: block;
+    color: black;
+}
+
+@media screen and (max-width:500px){
+    .header {
+        background-color: black;
+        color: aqua;
+    }
+    .logo{
+        color: aqua;
+    }
+    li{
+        float: none;
+        display: block;
+        color: aqua;
+    }
+}
+form{
+    padding-top: 40px;
+}

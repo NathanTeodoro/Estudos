@@ -1,0 +1,25 @@
+input:focus{
+    color: blue;
+}
+li:first-child{
+    color: blue;
+}
+p:first-of-type{
+    border: 2px solid red;
+}
+li:nth-child(3){
+    color: purple;
+}
+li:nth-last-child(1){
+    background-color: chartreuse;
+}
+li:last-of-type{
+    color: brown;
+}
+li:nth-of-type(odd){
+    background-color: aquamarine;
+    color: black;
+}
+li:nth-of-type(3n-5){
+    background-color: gold;
+}

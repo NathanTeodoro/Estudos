@@ -1,0 +1,41 @@
+body{
+    font-size: 1.2rem;
+}
+.static{
+    position: static;
+
+}
+.relative{
+    position: relative;
+    top:15px;
+    left: 20px;
+}
+.fixed{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+.absolute{
+    position: absolute;
+    top: 40px;
+}
+.quadrado{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+.ret{
+    width: 100px;
+    height: 500px;
+    display: inline-block;
+}
+.bg-red{
+    background-color: red;
+
+}
+.bg-blue{
+    background-color: blue;
+}
+.bg-green{
+    background-color: green;
+}

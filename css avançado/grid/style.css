@@ -1,0 +1,26 @@
+.container{
+    color:white;
+    display: grid;/*definimos grid*/
+    /*agora definimos o estilo*/
+    padding: 10px;
+    background-color: grey;
+    grid-template-rows: auto auto;/*duas linhas tamanho automatico*/
+    grid-template-columns: 1fr 2fr 1fr;/*três colunas tamanho automatico*/
+        /*unidade de medida exclusiva do grid
+        nesse caso usamos frações o elemento do meio tera o dobro de tamanho*/
+    /*grid-template: 200px 100px / 1fr 2fr 1fr; 
+forma resumida de usar==>[tamanho das linhas] / [tamanho colunas]*/
+    row-gap: 10px; /*espaço vazio entre as linhas*/
+    column-gap: 10px;/*espaço vazio entre as colunas*/
+    /*justify-items: center; ---> alinha os elementos da grid no centro horizontalmente*/
+    /*align-items: stretch; --->alinha os itens na grid na vertical*/
+}
+.r1{
+    background-color: red;
+}
+.r2{
+    background-color: blue;
+}
+.r3{
+    background-color: green;
+}

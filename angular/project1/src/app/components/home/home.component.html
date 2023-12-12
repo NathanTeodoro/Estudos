@@ -1,0 +1,16 @@
+<p>home works!</p>
+<table id="table">
+    <th>Nome</th>
+    <th>Sexo</th>
+    <th>Idade</th>
+    <tr *ngFor="let cliente of clientes">
+        <td>{{cliente.nome | uppercase}}</td>
+        <td>{{cliente.sexo | sexo}}</td>
+        <td>{{cliente.idade}}</td>
+        <td>{{cliente.salario | currency:'BRL'}}</td>
+        
+    </tr>
+
+</table>
+<!--os pipes | ajudam a estilizar nossas exibições sem alterar os dados do obj-->
+<span>{{clientes|json}}</span>
