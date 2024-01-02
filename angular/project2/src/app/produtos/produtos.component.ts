@@ -28,19 +28,21 @@ ngOnInit(): void {
 }
 term:string = ""
 i!: number;
-nome=[]
-buscar(term:string, nome:any):void{
+nome=[];
+n!:number;
+buscar(term:string, nome:any, n:number):void{
     for(let i=0; i<this.produtos.length; i++){
     var titulo = this.produtos[i].titulo
     function result(titulo:string,nome:any){
       if(titulo.includes(term)){
-       console.log(titulo.s)
-
+       nome.push(titulo.indexOf(term))
+       console.log(nome)
+        return n = nome
       }    
 }
+
 result(titulo, nome)
 }
-  
 
   }
   //console.log(this.produtos[this.i].titulo)

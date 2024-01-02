@@ -1,7 +1,23 @@
 <app-toolbar></app-toolbar>
 <input placeholder="search" type='text' [(ngModel)]="term">
-<button type="submit" (click)="buscar(term,nome)"><mat-icon>search</mat-icon></button>
-<h1>Pesquisa: '{{term}}'</h1>
-<h2>{{nome}}</h2>
-<app-view-product [nome]="produtos"></app-view-product>
+<button type="submit" (click)="buscar(term,nome,n)"><mat-icon>search</mat-icon></button>
+<h1>Você pesquisou por: {{term}}</h1>
+<mat-grid-list cols="4" rowHeight="1:1.2">
+    <div *ngFor="let n of nome;">
+      <mat-grid-tile>
+        <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>{{produtos[n].titulo}}</mat-card-title>
+          <mat-card-subtitle>{{produtos[n].valor}}</mat-card-subtitle>
+        </mat-card-header>
+        <!--<img mat-card-image src="{{'../../assets/images/' + produtos[n].img}}" alt="{{produtos[n].titulo}}" width="250px">-->
+        <mat-card-content>
+          <p>
+            {{produtos[n].titulo}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+      </mat-grid-tile>
+    </div>
+</mat-grid-list>
 <router-outlet></router-outlet>
