@@ -1,0 +1,72 @@
+*{
+  background-color: whitesmoke;
+}
+input{
+    border: 0px none whitesmoke;
+    background-color: #e0e0e0;
+    width: 50vw;
+    height: 40px;
+    border-radius: 1px;
+    margin-left: 10%;
+    margin-right: 3%;
+    padding-inline-start: 15px;
+}
+button{
+    border: none;
+    background-color: white;
+    
+}
+.mat-grid-tile-content{
+  width: 80%;
+  height: 80%;
+  flex-direction: column;
+}
+.mat-grid-tile {
+    background: #f5f5f5;
+  }
+.card {
+  align-items: center;
+  justify-content: flex-end;
+  background: transparent;
+  background-size:cover ;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 80%;
+  height: 80%;
+  padding: 0;
+}
+.card mat-card-title{
+  justify-self: flex-start;
+}
+.img-card{
+  width:  200px;
+  height: auto;
+}
+.descri{
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgb(255, 255, 255);
+}
+.descri button{
+  background-color: greenyellow;
+  margin-top: 5%;
+  border-radius: 2px;
+}
+.descri button:hover{
+  background-color: rgb(30, 255, 0);
+
+}
+.bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background-color: whitesmoke;
+}

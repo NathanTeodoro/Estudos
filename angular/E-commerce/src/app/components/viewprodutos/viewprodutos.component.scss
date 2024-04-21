@@ -1,0 +1,50 @@
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+.lista{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1em;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.vt{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10vw;
+    justify-content: flex-end;
+    align-items: flex-end;
+    list-style: none;
+    
+}
+li{
+    padding: 0
+}
+.comprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+    padding: 1em;
+    background-color: black;
+    color: azure;
+    font-size: 1em;
+    width: 15vw;
+}
+.comprar:hover{
+    background-color: greenyellow;
+    color: black;
+}
+.vt ul{
+    color: green;
+    font-size: medium;
+  }

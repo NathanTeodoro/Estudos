@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="product-form">
+    <label for="product-name">Nome do produto:</label>
+    <input type="text" id="product-name" name="product-name" required><br>
+  
+    <label for="product-description">Descrição do produto:</label>
+    <textarea id="product-description" name="product-description" rows="4" cols="50" required></textarea><br>
+  
+    <label for="product-value">Valor do produto:</label>
+    <input type="number" id="product-value" name="product-value" min="0" required><br>
+  
+    <label for="available-for-sale">Disponível para venda:</label>
+    <label for="available-yes">Sim</label>
+    <input type="radio" id="available-yes" name="available-for-sale" value="yes" required>
+    <label for="available-no">Não</label>
+    <input type="radio" id="available-no" name="available-for-sale" value="no"><br>
+  
+    <button id="register-product-button">Registrar</button>
+  </form>
+  
+  <table id="products-table">
+    <thead>
+      <tr>
+        <th>Nome do produto</th>
+        <th>Valor do produto</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  
+  <button id="new-product-button">Novo produto</button>
+  
+</body>
+</html>
+<script src="script.js"></script>

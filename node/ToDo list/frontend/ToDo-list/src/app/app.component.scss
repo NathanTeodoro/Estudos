@@ -1,0 +1,16 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    display: grid;
+    place-items: center;
+    padding: 1px;
+    
+}
+.main button{
+    margin: 1px;
+}
+.date-hour{
+    place-items:center left;
+}

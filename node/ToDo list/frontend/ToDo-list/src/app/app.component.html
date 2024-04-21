@@ -1,0 +1,15 @@
+<div class="main">
+  <h1>
+  NOTE's
+</h1>
+
+<textarea name="" id="newNotes" cols="20" rows="3" placeholder="Add notes"></textarea>
+<div class="date-hour">
+<input type="date" id="newDate">
+<input type="time" id="newHour">
+</div>
+<button (click)="addNotes()">+</button>
+<ul *ngFor="let note of notes" class="list">
+  <li>{{note.id}} {{note.note}}   <button>excluir</button><button>editar</button></li>
+</ul>
+</div>

@@ -1,0 +1,19 @@
+<app-toolbar></app-toolbar>
+
+<h1 class="details">Carrinho</h1>
+<li class="lista" *ngFor="let item of this.CarrinhoService.itensNoCarrinho; let i=index">
+    <ul class="item">
+    <input type="checkbox" name="" id="">
+    <img src="{{'../../assets/images/' + this.CarrinhoService.itensNoCarrinho[i].img}}" alt="{{this.CarrinhoService.itensNoCarrinho[i].titulo}}" width="120px">
+    <p>{{this.CarrinhoService.itensNoCarrinho[i].titulo}}</p> 
+    <p>{{this.CarrinhoService.itensNoCarrinho[i].valor|currency:'BRL': 'R$': '1.3-4'}}</p>     
+    </ul>
+</li>
+
+<div class="vt">
+    <h2>Valor total:</h2>
+<li *ngFor="let item of this.CarrinhoService.itensNoCarrinho; let i=index;">
+    <ul>{{this.CarrinhoService.itensNoCarrinho[i].valor|currency:'BRL': 'R$': '1.3-4'}}</ul>
+</li>
+<button class="comprar">Finalizar pedido <mat-icon>recommend</mat-icon></button>
+</div>
