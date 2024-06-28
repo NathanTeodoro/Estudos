@@ -18,7 +18,7 @@ itens = [
 'video+game+nintendo',
 'video+game+megadrive',
 'Celular',
-'Celular+iphone',
+'iphone',
 'Celular+Xiaomi',
 'Celular+multilaser',
 'Celular+positivo',
@@ -42,12 +42,15 @@ for i in itens:
         imagens = driver.find_elements(By.XPATH,'//img[@data-testid = "image"]')
 
         for titulo,valor,imagem in zip(titulos,valores ,imagens):
-                produtos = { 'id' : id.hex,
-                        'titulo' : titulo.text,
-                        'valor' : valor.text,
-                        'img' : titulo.text+".png"}
+                produtos = { 
+                        id : id.hex,
+                        "categoria": str(i),
+                        titulo : titulo.text,
+                        valor : valor.text,
+                        "img" : titulo.text+".png"}
                 
-                sys.stdout = open('produtos.txt','a').write(str(produtos))
+                #sys.stdout = open('produtos.txt','a').write(str(produtos))
+                print(produtos)
                 imagem.screenshot('/home/teodoros/Documentos/programing/python/crawler/imagens/'
                                 +str(titulo.text)+'.png')
 

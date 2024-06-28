@@ -8,13 +8,18 @@ import { CarrinhoService } from 'src/app/services/carrinho.service';
 })
 
 
-export class ViewprodutosComponent {
+export class ViewprodutosComponent implements OnInit{
 
   constructor(public CarrinhoService: CarrinhoService){}
   i!:number
   //itensNoCarrinho:any[]=[]
   mostrarCarrinho(){
-    this.CarrinhoService.mostrarcarrinho()
-    
+    this.CarrinhoService.mostrarcarrinho();
+  }
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.CarrinhoService.somaValores()
+  }
 }
-}
+

@@ -1,0 +1,64 @@
+import csv
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import sys
+from PIL import Image
+import uuid
+
+driver = webdriver.Chrome()
+driver.implicitly_wait(time_to_wait=120)
+driver.maximize_window()
+
+itens = [
+'fones+de+ouvido',
+'cabos+usb',
+'video+game',
+'video+game+xbox',
+'video+game+playstation',
+'video+game+nintendo',
+'video+game+megadrive',
+'Celular',
+'iphone',
+'Celular+Xiaomi',
+'Celular+multilaser',
+'Celular+positivo',
+'Celular+motorola',
+'Celular+lenovo',
+'Celular+philco',
+'Celular+Microsoft',
+'Celular+nokia',
+'Tablet',
+'Roteadore',
+'Notebook',
+'Carregador',
+'tv'
+]
+for i in itens:
+        driver.implicitly_wait(time_to_wait=120)
+        driver.get('https://www.magazineluiza.com.br/busca/'+str(i)+'/')
+        
+        titulos = driver.find_elements(By.XPATH,'//h2[@data-testid="product-title"]')
+        valores = driver.find_elements(By.XPATH,'//p[@data-testid="price-value"]')
+        imagens = driver.find_elements(By.XPATH,'//img[@data-testid = "image"]')
+        categoria = i
+
+        for titulo,valor, imagem in zip(titulos,valores, imagens):        
+            img = titulo.text
+            #imagem.screenshot('/home/teodoros/Documentos/programing/python/crawler/imagens/'
+            #                    +str(titulo.text)+'.png')
+            produtos = {
+                    
+                    categoria:"",
+                    'titulo':titulo.text.replace(',',''),
+                    'valor':valor.text.replace(',','.'),
+                    'img':img.replace(',','')+'.png'}
+
+            with open('produtos.csv', 'a', newline='')as csvfile:
+                    spamwriter = csv.writer(csvfile, delimiter=' ',
+                                            quotechar= '|', quoting = csv.QUOTE_MINIMAL)
+                    time.sleep(.2)
+                    spamwriter.writerow([produtos])
+                
+        
+

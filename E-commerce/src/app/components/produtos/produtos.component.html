@@ -4,18 +4,18 @@
 <button type="submit" (click)="buscar(term, produtosfiltrados, produtos,i)"><mat-icon>search</mat-icon></button>
 </div>
 <h1 style="background-color: whitesmoke; margin: 0 0 0;">Você pesquisou por: {{term}}</h1>
-<mat-grid-list cols="3" rowHeight="35em" gutterSize="2px"> 
+<mat-grid-list cols="3" rowHeight="35em" gutterSize=".5px"> 
   <div *ngFor="let produto of produtosfiltrados;let i = index">
       <mat-grid-tile>
         <mat-card class="card">
-          <img class="img-card" mat-card-image src="{{'../../assets/images/' + produtosfiltrados[i].img}}" alt="{{produtosfiltrados[i].titulo}}">
+          <img class="img-card" mat-card-image src="{{'../../../../../assets/imagens/' + produtosfiltrados[i].img}}" alt="{{produtosfiltrados[i].titulo}}">
         <mat-card-header>
           <mat-card-title>{{produtosfiltrados[i].titulo}}</mat-card-title>
           <mat-card-subtitle>{{produtosfiltrados[i].titulo}}</mat-card-subtitle>
         </mat-card-header>
           <mat-card-content class="descri">
           <h2 style="color: black; background-color: transparent;">
-            {{produtosfiltrados[i].valor| currency:'BRL': 'R$': '1.3-4'}}
+            {{produtosfiltrados[i].valor| currency:'BRL': 'R$': '1.3'}}
           </h2>
           <p style="color: black; display: block;">OU em 12x SEM JUROS</p>
           <mat-icon style="color: black; margin: 1%;">add_shopping_cart</mat-icon>

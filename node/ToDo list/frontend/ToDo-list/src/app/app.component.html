@@ -1,15 +1,43 @@
 <div class="main">
   <h1>
   NOTE's
-</h1>
+  </h1>
+    <p class="swtich">
+      <mat-slide-toggle  
+      [checked]="isLightTheme" 
+      (change)="onThemeSwitchChange()">tema escuro</mat-slide-toggle>
+    </p>
 
 <textarea name="" id="newNotes" cols="20" rows="3" placeholder="Add notes"></textarea>
 <div class="date-hour">
 <input type="date" id="newDate">
 <input type="time" id="newHour">
 </div>
-<button (click)="addNotes()">+</button>
-<ul *ngFor="let note of notes" class="list">
-  <li>{{note.id}} {{note.note}}   <button>excluir</button><button>editar</button></li>
-</ul>
+<button (click)="addNotes()" class="add"><img src="../assets/add.png" alt="addbutton"></button>
+
+
+<h2 *ngFor="let note of notes" class="list">
+  <h3>{{note.note}} 
+  <div class="buttons">  
+  <button (click)="delNotes(note)">
+  <img src="../assets/trash.png" alt="deletebutton">
+  </button>
+  <button>
+    <img src="../assets/pen.png" alt="editbutton" (click)="toggleDisplay(note)">
+  </button>
+  </div>
+  <div [hidden]="isShow">
+    
+    <textarea 
+      type="text" 
+      class="editNotes" 
+      id="{{note._id}}" 
+      placeholder="Edit notes">{{note.note}}
+    </textarea>
+    
+    <button class="enter" (click)="editNotes(note, noteid)">
+      <img src="../assets/enter.png" alt="enterbutton" ></button>
+  </div>
+    </h3>
+</h2>
 </div>

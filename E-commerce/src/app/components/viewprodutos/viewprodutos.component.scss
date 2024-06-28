@@ -7,24 +7,30 @@
 }
 .lista{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    padding: 1em;
+    padding: .5em;
 }
+
 .item{
     display: flex;
     flex-direction: row;
     justify-content:center;
     align-items: center;
+    font-size: 2.5vh;
+    border-bottom: .5px;
 }
-.vt{
+.vt{margin: auto;
+    border-radius: 2px;
+    color: whitesmoke;
     display: flex;
-    flex-direction: column;
-    padding-right: 10vw;
+    width: max-content;
+    flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     list-style: none;
-    
+    background-color: black;
+    padding: 2vw;
 }
 li{
     padding: 0
@@ -35,8 +41,8 @@ li{
     align-items: center;
     margin: 2em;
     padding: 1em;
-    background-color: black;
-    color: azure;
+    background-color: whitesmoke;
+    color: black;
     font-size: 1em;
     width: 15vw;
 }
@@ -44,7 +50,8 @@ li{
     background-color: greenyellow;
     color: black;
 }
-.vt ul{
+.vt h3{
     color: green;
-    font-size: medium;
+    font-size: 5vh;
+    padding: 1em;
   }

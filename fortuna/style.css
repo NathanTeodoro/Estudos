@@ -1,0 +1,17 @@
+.table{
+    display: grid;
+    grid-template-columns: 21vw 21vw 21vw;
+    grid-template-rows: 21vh 21vh 21vh ;
+    gap: 1%;
+    background-color: #000000;
+    width: 100%;
+    color: wheat;
+    padding: 10px;
+}
+.table div{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}

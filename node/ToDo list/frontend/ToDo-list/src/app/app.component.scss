@@ -1,16 +1,170 @@
-body{
-    padding: 0;
-    margin: 0;
+@import "_themes";
+@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+
+* {
+  font-family: 'Poppins';
+  font-weight: 400;
+  background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 3.366rem; /* 53.92px */ color: var(--text);}
+
+h2 {font-size: 2.525rem; /* 40.32px */ padding: 0; margin: 0;}
+
+h3 {font-size: 1.894rem; /* 30.24px */
+  color:  var(--text);
+}
+
+h4 {font-size: 1.421rem; /* 22.72px */}
+
+h5 {font-size: 1.066rem; /* 17.12px */}
+
+small {font-size: 0.600rem; /* 9.6px */}
+
+
+.swtich p{
+  margin: 8px 0;
+  display: block;
+  color: var(--text);
+}
+
+.mat-mdc-slide-toggle.mat-accent{
+  color: transparent;
+
+}
+.mdc-switch .mdc-switch__ripple {
+  height: var(--mdc-switch-state-layer-size);
+  width: var(--mdc-switch-state-layer-size);
+  border-radius: 15px;
+}
+.mat-mdc-slide-toggle {
+  --mdc-switch-selected-handle-color: variable-exists($name: $accent);
+  --mdc-switch-selected-pressed-handle-color:variable-exists($name: $accent);
+  --mdc-switch-selected-pressed-state-layer-color: variable-exists($name: $accent);
+  --mdc-switch-selected-hover-state-layer-color: variable-exists($name: $accent);
+  --mdc-switch-selected-hover-handle-color: variable-exists($name: $accent);
+  --mdc-switch-selected-focus-state-layer-color: variable-exists($name: $accent);
+  --mdc-switch-selected-focus-handle-color: variable-exists($name: $accent);
+  --mdc-switch-selected-track-color:variable-exists($name: $accent);
+  --mdc-switch-selected-pressed-track-color: variable-exists($name: $accent);
+  --mdc-switch-selected-hover-track-color: variable-exists($name: $accent);
+  --mdc-switch-selected-focus-track-color: variable-exists($name: $accent);
+}
+.mdc-switch:enabled .mdc-switch__track::after {
+  background: red;
+}
+.mdc-switch:enabled .mdc-switch__track::before {
+  background: red;
 }
 .main{
     display: grid;
     place-items: center;
-    padding: 1px;
-    
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+#newNotes{
+  background-color: var(--background2);
+  padding: .5em;
+  margin: 1em;
+  color: var(--text);
+  border-radius: 5px;
+  width: 50vw;
+  height: 10vh;
+  border-style: none;
+}
+#newNotes:hover{
+  background-color: var(--background2);
+}
+input{
+  background-color: var(--background);
+  padding: .5em;
+  margin: 1em;
+  color: var(--text);
+  border-radius: 5px;
+  width: 20vw;
+  height: 6vh;
+  border-style: none;
+}
+input:hover{
+  background-color: var(--primary);
+}
+h3 img{
+  width: 2em;
+  background-color: transparent;
+  
+}
+h3 button{
+  border-radius: 5px;
+  border-style: none;
+  justify-content: baseline;
+  align-items: center;
 }
 .main button{
-    margin: 1px;
+    margin-left: .5em;
+    background-color: var(--secondary);
+    padding: .3em;
+    border-style: none;
+    
+}
+.main button:hover{
+  background-color: var(--primary);
 }
 .date-hour{
+    background-color: var(--background1);
+    border-radius: 5px;
     place-items:center left;
+    color: var(--text);
+}
+.date-hour input{
+  color: var(--text);
+  background-color: var(--background2);
+  margin-bottom: 1em;
+}
+h3{
+  color: var(--text);
+  width: 20em;
+  border-bottom: var(--secondary);
+}
+.buttons{
+  justify-content: baseline;
+}
+.add img{
+  background-color: transparent;
+  width: 2em;
+}
+.add {
+  border-radius: 5px;
+}
+.add:hover{
+  background-color: var(--primary);
+}
+.editNotes{
+  color: #f7f5fa;
+  background-color: var(--background);
+  border-style: none;
+  border-radius: 5px;
+  width: 50vw;
+  height: 12vh;
+}
+.editNotes:hover{
+  background-color: var(--secondary);
+}
+.enter{
+  border-radius: 5px;
+  border-style: none;
+}
+.enter img{
+  background-color: transparent;
+  width: 2em;
+}
+.enter img:hover{
+  background-color: var(--background2);
 }
