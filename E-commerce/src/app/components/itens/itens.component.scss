@@ -12,17 +12,18 @@ mat-grid-tile {
     
   }
 .card {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 400px;
-  height: 400px;
-  background: rgba(195, 195, 195, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  justify-content: flex-end;
+  background: transparent;
+  background-size:cover ;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+  height: 90%;
+  padding: 0;
 }
 
 .header-image {
