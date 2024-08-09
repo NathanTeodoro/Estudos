@@ -1,21 +1,23 @@
 import logging
-from telegram import Update, ForceReply, ReplyKeyboardMarkup, ReplyKeyboardRemove, User
-from telegram.ext import Application,CommandHandler,MessageHandler,filters,CallbackContext,ConversationHandler,BasePersistence
+from telegram import Update, ForceReply, ReplyKeyboardMarkup
+from telegram.ext import (Application,CommandHandler,MessageHandler,filters,CallbackContext,ConversationHandler)
 import mysql.connector as mysql
-import asyncio as asyncio
 import warnings as warnings
 #conexão banco de dados
-def mysql_con(host, user , password, database):
-     connection= mysql.connect(
-          host = host,
-          user = user,
-          password = password,
-          database = database
-    )
-     return connection
+#def mysql_con(host, user , password, database):
+#     connection= mysql.connect(
+#          host = host,
+#          user = user,
+#          password = password,
+#          database = database
+#    )
+#     return connection
+#
+#global connection 
+#connection = mysql_con('localhost',' root', 'root123@nathaN', 'pythonbot')
+#
+#cursor = connection.cursor()
 
-global connection 
-connection = mysql_con('localhost',' root', '', 'pythonbot')
 #habilitar login
 logging.basicConfig(
     format="%(asctime)s - %(name)s -%(levelname) %(message)s" , level=logging.INFO
@@ -43,31 +45,24 @@ async def inico(update:Update, context: CallbackContext):
     return MSG
 
 async def msg(update:Update, context: CallbackContext):
-    global hora
-    hora=update.message.text
-    global usuario
-    usuario = str(update.message.from_user.id)
+    #global hora
+    #hora=update.message.text
+    #global usuario
+    #usuario = str(update.message.from_user.id)
     keyboard=[["sim","não"]]
     await update.message.reply_text(f"Mandarei as {hora.lower()}h! ok?",
         reply_markup=ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, input_field_placeholder="sim ou não")
     )
-    Application.user_data["pool"] = hora,usuario
+    #cursor = connection.cursor()
+    #cursor.execute('''
+    #               INSERT INTO users VALUES
+    #               ${usuario}, ${hora}
+    #               ''')
+    #cursor.close()
     return CONFIRM
     
-async def db(dados):
-    await asyncio.sleep(1) 
-    global cursor 
-    cursor = connection.cursor()
-    cursor.execute('''
-                    INSERT INTO users (user, hour) VALUES ($1, $2);
-                    '''
-                    ,(usuario, hora))
-    print(usuario+"e"+hora)
-    connection.commit()
-    cursor.close()
-
 async def confirm(update:Update, context: CallbackContext) -> int:
-    await update.message.reply_text("Otimo!")
+    await update.message.reply_text("OK!")
     return THANKS
 
 async def thanks(update:Update, context: CallbackContext) -> int:
@@ -90,23 +85,9 @@ async def cancel(update:Update, context:CallbackContext) -> int:
           "\U0001F916 cancelado \U0001F64F"
      )
 
-async def post_init(app:Application)->None:
-    app.user_data['pool'] = await create_pool(
-         host = 'localhost',
-          user = 'root', 
-          password = '',
-          database = 'pythonbot',
-    )
-    print("conexão feita")
-
-async def post_shutdown(app:Application)->None:
-    await app.user_data['pool'].close()
-    print("conexão close")
-
-
 def main() -> None:
     #"iniciar bot com o token"
-    aplicacao = Application.builder().token('6378218111:AAFkIuDmJ7ODQJam3dDDlE5eJ_I0xbg-uJI').post_init(post_init).post_shutdown(post_shutdown).build()
+    aplicacao = Application.builder().token('6378218111:AAFkIuDmJ7ODQJam3dDDlE5eJ_I0xbg-uJI').build()
 
     #'acionando comandos'
     aplicacao.add_handler(CommandHandler("help",ajuda))
@@ -117,7 +98,7 @@ def main() -> None:
          states={
               MSG: [MessageHandler(filters.Regex(r'\b(0?[1-9]|1\d|2[0-4])\b'), msg)],
               CONFIRM: [
-                   MessageHandler(filters.Regex("^(sim)$"), obg, db), 
+                   MessageHandler(filters.Regex("^(sim)$"), obg), 
                    MessageHandler(filters.Regex("^(não)$"), thanks)  
                    ],
               CANCEL:[CommandHandler("cancel", cancel)],
@@ -127,7 +108,6 @@ def main() -> None:
     #aplicacao.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, imprimir))
     aplicacao.add_handler(conv_handler)
     aplicacao.run_polling(allowed_updates=Update.ALL_TYPES)
-    1
 #warnings.filterwarnings('ignore', category = RuntimeWarning)
 if __name__ == "__main__":
-        asyncio.run(main())
+        main()
