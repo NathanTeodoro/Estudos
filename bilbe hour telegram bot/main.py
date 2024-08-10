@@ -87,7 +87,7 @@ async def cancel(update:Update, context:CallbackContext) -> int:
 
 def main() -> None:
     #"iniciar bot com o token"
-    aplicacao = Application.builder().token('6378218111:AAFkIuDmJ7ODQJam3dDDlE5eJ_I0xbg-uJI').build()
+    aplicacao = Application.builder().token('').build()
 
     #'acionando comandos'
     aplicacao.add_handler(CommandHandler("help",ajuda))

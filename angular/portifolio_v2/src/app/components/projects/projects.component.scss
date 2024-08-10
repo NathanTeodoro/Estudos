@@ -1,0 +1,83 @@
+$text: #e6e5f1;
+$background: #07060f;
+$primary: #9d98e2;
+$secondary: #211884;
+$accent: #3f31ea;
+
+@import url('https://fonts.googleapis.com/css?family=Genos:700|Genos:400');
+*{margin: 0;
+    padding: 0;}
+
+* {
+  font-family: 'Genos';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Genos';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+p {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+
+
+section{
+    padding: 1em;
+    display: grid;
+    grid-template: 
+        'project project project'
+    ;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    background: rgb(33,24,132);
+    background: linear-gradient(rgb(0, 0, 0) 0%, rgb(12, 6, 63) 50%, rgb(0, 0, 0) 100%);
+}
+img{
+    width: 10rem;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $text;
+    background-color: #1b182c;
+    width: 30em;
+    height: 25em;
+    padding: .5em;
+    margin: .5em;
+    background: rgba(19, 4, 73, 0.2);
+    border-radius: 1em;
+    
+}
+.project a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section div:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(2px 2px 5   px $accent);
+}
+.project img{
+    display: flex;
+    
+}

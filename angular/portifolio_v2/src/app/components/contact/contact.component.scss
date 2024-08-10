@@ -1,0 +1,91 @@
+$text: #e6e5f1;
+$background: #07060f;
+$primary: #9d98e2;
+$secondary: #211884;
+$accent: #3f31ea;
+
+@import url('https://fonts.googleapis.com/css?family=Genos:700|Genos:400');
+*{margin: 0;
+    padding: 0;}
+
+* {
+  font-family: 'Genos';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Genos';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+.form{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(33,24,132);
+    background: radial-gradient(circle, rgb(15, 10, 71) 0%, rgb(0, 0, 0) 100%);
+}
+.form input{
+    width: 30em;
+    height: 4em;
+    margin: .5em;
+    padding: 0;
+    padding-left: 0;
+    font-size: 1.1em;
+    border-radius:1em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form textarea{
+    width: 40em;
+    height: 4em;
+    padding: .5em;
+    margin: .5em;
+    border-radius:1em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form img{
+    width: 3em;
+    height: 3em;
+    background-color: $accent;
+    border-radius: 1em;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: .750em;
+    margin: 0;
+}
+.form div{
+    display: flex;
+    flex-direction: row;
+    padding: .500em;
+    align-items: center;
+}
+.button{
+    width: 8em;
+    height: 3em;
+    background-color: $accent;
+    border-radius: .5em;
+    padding: .5em;
+    margin: 0;
+    font-size: 1.5em;
+}
+.button:hover{
+    background-color: radial-gradient(circle, rgb(15, 10, 71) 0%, rgb(0, 0, 0) 100%); ;
+}

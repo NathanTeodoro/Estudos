@@ -1,0 +1,95 @@
+$text: #e6e5f1;
+$background: #07060f;
+$primary: #9d98e2;
+$secondary: #211884;
+$accent: #3f31ea;
+
+@import url('https://fonts.googleapis.com/css?family=Genos:700|Genos:400');
+*{margin: 0;
+    padding: 0;}
+
+* {
+  font-family: 'Genos';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Genos';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+img{
+    width: 5em;
+    padding: .5em;
+    color: #000;
+    filter: drop-shadow(1px 1px 2px $secondary);
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+
+section{ 
+    
+}
+article{
+    display: grid;
+    grid-template: 
+        'about-text about-images'
+    ;
+    justify-content: center;
+    justify-items: center;
+    background-color: #0b0622;
+    padding: 0;
+}
+.about-text{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    font-size: 1.5em;
+    margin: 0;
+    color: $text;
+}
+
+.about-text p:hover{
+    transform: scale(1.1);
+}
+
+.about-image{
+    display: grid;
+    grid-template: 
+        'a '
+        'b '
+    ;
+    align-items: start;
+    width: 85%;
+    color: $text;
+    padding: 1em;
+    border-radius: 1em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 1em;
+}
+.about-image p{
+    font-size: 1.5em
+}
+.about-image img:hover{
+    background-color: #000000;
+}
+svg{
+    color:green
+}
